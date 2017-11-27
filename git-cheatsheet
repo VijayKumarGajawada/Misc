@@ -1,0 +1,106 @@
+git config --list	//list of users
+git config --global user.name "Vijay Gajawada"
+git config --global user.email "vijay.gajawada@outlook.com"
+
+--cloning a repo--
+git clone <url> <where to clone>
+
+--viewing info about remote repo--
+git remote -v
+git branch -a
+
+--adding files to staging--
+git add -A(--all)	//addes all the files
+git add -u	//addes modified, deleted files but not any new files/untracked files
+
+--commit changes--
+git diff 
+git status
+git add -A
+git commit -m "<detialed comment>"
+
+--changing the commit message (history too)--
+git commit --amend -m "<newMessage>"	//changes commit hash and history
+git commit --ament	//opens in vi and can change here
+
+--without changing history
+git revert <commit_hash>	//reverts to the given commit without changing the history log
+
+--copying commits--
+git cherry-pick <commit_hash>
+
+--push changes--
+git pull origin master
+git push origin master
+
+--creating a branch--
+git branch <branch_name>	//creates new branch
+git checkout <branch_name>	//switches to new branch
+
+--list local branches--
+git branch
+
+--list all branches--
+git branch -a
+
+--after commit push branch to remote--
+git push -u origin <branch_name>
+
+--merge a branch--
+git checkout master
+git pull origin master
+git branch --merged	//tells the branches we have merged
+git merge <branch_name>	//to merge branch
+git push origin master
+
+--deleting a branch--
+git branch --merged	//to check successful merge
+git branch -d <branch_name> //to delete the branch locally
+git branch -a
+git push origin --delete <branch_name>	//to delete remotely
+
+--stash--
+git stash save "<message>"	//changes are stashed and codes reverted
+git stash apply <stash_name>	//changes are copied from stash to code
+git stash pop	//grabs changes from the top stash and removes the stash
+git stash drop <stash_name>	//top stash changes are removed from code and stash is deleted
+git stash clear	//all changes are removed and stashes are deleted
+
+--log of commits--
+git log
+git log --stat	//shows files changed within the commit
+git reflog	//commits in order of last reference
+
+--reset--
+git reset	//unstages all the changes
+git reset --soft <commit_hash>	//resets the tracked files to the given commit hash and changes are back to staging area
+
+git reset <commit_hash> //mixed reset, changes are back to working directory
+
+git reset --hard <commit_hash>	//resets to the commit hash and changes are gone
+
+--clean untracked--
+git clean -df	//d=directory, f=files
+
+git checkout <commit_hash>	//to get the changes from the commit hash back. This results in detatched HEAD. To fix this create a new branch at this point to use the commits
+
+--diffence in commits--
+git diff <commit_hash1> <commit_hash2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
