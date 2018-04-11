@@ -21,7 +21,7 @@ git commit -m "<detialed comment>"
 
 --changing the commit message (history too)--
 git commit --amend -m "<newMessage>"	//changes commit hash and history
-git commit --ament	//opens in vi and can change here
+git commit --amend	//opens in vi and can change here
 
 --without changing history
 git revert <commit_hash>	//reverts to the given commit without changing the history log
@@ -82,25 +82,9 @@ git reset --hard <commit_hash>	//resets to the commit hash and changes are gone
 --clean untracked--
 git clean -df	//d=directory, f=files
 
-git checkout <commit_hash>	//to get the changes from the commit hash back. This results in detatched HEAD. To fix this create a new branch at this point to use the commits
+git checkout <commit_hash>	//to get the changes from the commit hash back. 
+                            //This results in detatched HEAD. 
+                            //To fix this create a new branch at this point to use the commits
 
 --diffence in commits--
 git diff <commit_hash1> <commit_hash2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
